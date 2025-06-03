@@ -191,7 +191,7 @@ This system is designed for educational and research purposes. It should **not b
 
 For questions, suggestions, or collaboration opportunities, please reach out through:
 
-- GitHub Issues: [Create an Issue](https://github.com/Carnit/Drug_recommendation_system/issues)
+- GitHub Issues: [Create an Issue](https://github.com/Carnit/Drug-recommendation-system/issues)
 - GitHub Profile: [@Carnit](https://github.com/Carnit)
 
 ---
