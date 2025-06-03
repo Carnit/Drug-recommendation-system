@@ -3,4 +3,5 @@ __pycache__
 *.csv 
 archive/
 *.pkl
-*.txt
+filenames.txt
+*.zip

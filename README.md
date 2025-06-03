@@ -6,7 +6,9 @@
 
 ## 📖 Overview
 
-The **Drug Recommendation System** is an innovative machine learning-based solution designed to assist healthcare providers in making personalized medication recommendations to patients. This university project leverages advanced algorithms to analyze patient data, medical history, and preferences to suggest suitable medications, ultimately improving patient outcomes and enhancing the quality of healthcare delivery.
+The **Drug Recommendation System** is an innovative machine learning-based solution designed to assist healthcare providers in making personalized medication recommendations to patients. This university project leverages advanced algorithms to analyze medicine descriptions, reasons for use, and other characteristics to suggest suitable alternative medications, ultimately improving patient outcomes and enhancing the quality of healthcare delivery.
+
+The system uses natural language processing (NLP) and cosine similarity to find medicines with similar properties, enabling healthcare providers to offer alternatives when a specific medicine is unavailable, contraindicated, or not preferred by the patient.
 
 ## 🎯 Objectives
 
@@ -19,23 +21,23 @@ The **Drug Recommendation System** is an innovative machine learning-based solut
 
 ### 🤖 Machine Learning Algorithms
 
-- **Collaborative Filtering**: Recommends medications based on similar patient profiles and treatment histories
-- **Content-Based Filtering**: Suggests drugs based on medication characteristics and patient conditions
-- **Hybrid Approach**: Combines multiple recommendation techniques for enhanced accuracy
+- **Content-Based Filtering**: Suggests drugs based on medication characteristics and descriptions
+- **Text Analysis**: Processes medicine descriptions and reasons to understand medication purposes
+- **Similarity Matching**: Identifies medicines with similar properties using cosine similarity
 
 ### 📊 Core Technologies
 
-#### 1. Singular Value Decomposition (SVD)
+#### 1. Cosine Similarity
 
-- **Application**: Applied to user-item interaction matrices where users represent patients and items represent medications
-- **Purpose**: Captures underlying patterns in patient preferences and medication characteristics
-- **Benefit**: Enables personalized recommendations through lower-dimensional representation of patient-medication interactions
+- **Application**: Applied to find similar medicines based on their descriptions and reasons
+- **Purpose**: Measures the similarity between medicine vectors in a multi-dimensional space
+- **Benefit**: Enables accurate recommendation of similar medicines based on content features
 
 #### 2. Natural Language Processing (NLP)
 
-- **Data Processing**: Extracts meaningful information from unstructured medical text data
-- **Sources**: Medical records, clinical notes, research articles, and patient reviews
-- **Enhancement**: Improves recommendation accuracy by understanding patient symptoms, diagnoses, and treatment plans
+- **Data Processing**: Extracts meaningful information from medicine descriptions and reasons
+- **Techniques**: Text cleaning, stopword removal, stemming, and vectorization
+- **Enhancement**: Improves recommendation accuracy by understanding medicine descriptions and uses
 
 #### 3. Predictive Analytics
 
@@ -49,12 +51,14 @@ The system follows a comprehensive approach combining:
 
 1. **Data Collection & Preprocessing**
    - Drug review datasets (Kaggle Repository)
+   - Cleaning and normalizing medicine data
+   - Text processing of medicine descriptions and reasons
 
 2. **Feature Engineering**
-   - Patient demographic analysis
-   - Medical condition categorization
-   - Drug characteristic extraction
-   - Review sentiment analysis
+   - Text vectorization using CountVectorizer
+   - Stopword removal for better text analysis
+   - Stemming to normalize word variations
+   - Cosine similarity calculation for recommendations
 
 ## 📈 Benefits for Healthcare
 
@@ -76,10 +80,10 @@ The system follows a comprehensive approach combining:
 
 - **Programming Language**: Python
 - **Machine Learning**: scikit-learn, pandas, numpy
-- **Natural Language Processing**: NLTK, spaCy
+- **Natural Language Processing**: NLTK
 - **Data Visualization**: matplotlib, seaborn
-- **Database**: SQL/NoSQL for data storage
-- **Web Framework**: Flask/Django (for deployment)
+- **Web Framework**: Streamlit
+- **Image Processing**: PIL (Python Imaging Library)
 
 ## 📊 Dataset Information
 
@@ -92,12 +96,6 @@ The system utilizes the <https://www.kaggle.com/datasets/saratchendra/medicine-r
 ```bash
 Python 3.7+
 pip (Python package installer)
-```
-
-or
-
-```bash
-uv (python project Manager)
 ```
 
 ### Installation
@@ -116,12 +114,21 @@ pip install -r requirements.txt
 ### Usage
 
 ```bash
-# Run the main application
-python main.py
+# Run the web application with Streamlit
+streamlit run app.py
 
-# For web interface (if applicable)
-python app.py
+# Or run the data cleaning script to prepare your data
+python data_cleaning.py
 ```
+
+### Important Note
+
+The project relies on two large pickle files that aren't included in the repository due to size constraints:
+
+- `similarity.pkl` (~3.76 GB): Contains similarity vectors for medicine recommendations
+- `medicine_dict.pkl` (~2.53 GB): Contains the processed medicine dictionary
+
+These files are generated by running the data processing scripts on the medicine dataset.
 
 ## 🎓 Academic Achievement
 
@@ -163,7 +170,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This system is designed for educational and research purposes. It should **not be used as a substitute for professional medical advice, diagnosis, or treatment**. Always consult with qualified healthcare professionals before making medical decisions.
 
-## Next Steps
+## ⏭️ Next Steps
 
 1. To identify medicines based on salt components.
 2. To use dataset which provide us.
