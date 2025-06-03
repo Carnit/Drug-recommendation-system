@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Health Insurance Schemes & MediAlt</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1><img src="../images/logo.png" alt="MEDALT Logo"> MedAlt</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Generate Alternative</a></li>
+                <li><a href="gov-policies.html">Government Policies</a></li>
+                <li><a href="index.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Government Health Insurance Schemes Section -->
+    <section class="schemes-container">
+        <h1>Government Health Insurance Schemes in India</h1>
+        <div class="schemes">
+            <ul>
+                <li><a href="#" onclick="showDescription('ayushman')">Ayushman Bharat</a></li>
+                <li><a href="#" onclick="showDescription('awaz')">Awaz Health Insurance Scheme</a></li>
+                <li><a href="#" onclick="showDescription('aamAadmi')">Aam Aadmi Bima Yojana</a></li>
+                <li><a href="#" onclick="showDescription('bhamashah')">Bhamashah Swasthya Bima Yojana</a></li>
+                <li><a href="#" onclick="showDescription('cghs')">Central Government Health Scheme (CGHS)</a></li>
+                <li><a href="#" onclick="showDescription('cmInsurance')">Chief Minister’s Comprehensive Insurance Scheme</a></li>
+                <li><a href="#" onclick="showDescription('esi')">Employees’ State Insurance Scheme</a></li>
+                <li><a href="#" onclick="showDescription('karunya')">Karunya Health Scheme</a></li>
+                <li><a href="#" onclick="showDescription('jyotibaPhule')">Mahatma Jyotiba Phule Jan Arogya Yojana</a></li>
+                <li><a href="#" onclick="showDescription('amrutum')">Mukhyamantri Amrutum Yojana</a></li>
+                <li><a href="#" onclick="showDescription('suraksha')">Pradhan Mantri Suraksha Bima Yojana</a></li>
+                <li><a href="#" onclick="showDescription('ysrAarogyasri')">Dr YSR Aarogyasri Health Care Trust</a></li>
+                <li><a href="#" onclick="showDescription('telanganaHealth')">Telangana Employees & Journalists Health Scheme</a></li>
+                <li><a href="#" onclick="showDescription('rsby')">Rashtriya Swasthya Bima Yojana</a></li>
+                <li><a href="#" onclick="showDescription('universalHealth')">Universal Health Insurance Scheme</a></li>
+                <li><a href="#" onclick="showDescription('yeshasvini')">Yeshasvini Health Insurance Scheme</a></li>
+                <li><a href="#" onclick="showDescription('westBengalHealth')">West Bengal Health Scheme</a></li>
+            </ul>
+        </div>
+        <div id="description"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>@ All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script>
+        const descriptions = {
+            ayushman: "Ayushman Bharat is a flagship scheme under the National Health Policy, providing healthcare coverage of ₹5 lakh per family annually. It targets economically vulnerable families across India and covers expenses related to secondary and tertiary hospitalization. The scheme covers over 1,350 medical packages, including surgeries, treatment for critical illnesses, and diagnostic services. Families can avail of cashless services across empaneled public and private hospitals. The goal is to reduce the financial burden of healthcare costs and ensure access to quality medical services. This initiative is a step toward achieving Universal Health Coverage (UHC).",
+            awaz: "The Awaz Health Insurance Scheme, launched by the Kerala government, specifically targets migrant workers in the state. It provides health insurance of ₹15,000 for medical treatments and ₹2 lakh for accidental death coverage. The scheme aims to provide much-needed financial protection to migrant laborers, ensuring that they receive healthcare without incurring significant expenses. The focus is on enhancing the welfare of laborers working in hazardous conditions, often with low wages and minimal access to healthcare facilities. Registration is simple, and beneficiaries receive an Awaz health card for easy identification and availing benefits.",
+            aamAadmi: "Aam Aadmi Bima Yojana was launched to provide life insurance to rural landless households. It covers accidental death, natural death, and disability. The scheme ensures financial security for families, providing up to ₹30,000 in case of natural death and ₹75,000 in case of accidental death. Additionally, children of policyholders receive educational scholarships to ensure they continue their education. The policy helps alleviate the economic strain caused by the death or disability of the household's primary breadwinner, fostering social security for the vulnerable rural population.",
+            bhamashah: "Launched by the Rajasthan government, the Bhamashah Swasthya Bima Yojana (BSBY) offers cashless health insurance coverage to low-income families. The scheme provides up to ₹30,000 for general illness treatments and ₹3 lakh for critical illnesses per family annually. Services include hospitalizations, surgeries, and diagnostics. A major feature is that it’s a family floater scheme, meaning all members of a family can use the combined coverage. The scheme has been designed to improve healthcare access for the underprivileged and reduce the financial stress caused by expensive medical treatments.",
+            cghs: "CGHS is a comprehensive health scheme designed for central government employees, pensioners, and their dependents. The scheme covers outpatient and inpatient treatments in government and empaneled private hospitals. Besides allopathic treatment, it also covers alternative treatments such as Ayurveda, Unani, and Homeopathy. Beneficiaries are issued a CGHS card, which facilitates cashless treatment. Covering a wide range of diseases and treatments, the scheme also includes provisions for family welfare, vaccinations, and preventive care. CGHS ensures long-term healthcare security for central government personnel and their families.",
+            cmInsurance: "Tamil Nadu's Chief Minister’s Comprehensive Insurance Scheme aims to provide free medical care to economically weaker sections of society. Beneficiaries receive coverage up to ₹5 lakh annually for more than 1,200 listed treatments, including cancer care, surgeries, and organ transplants. The scheme is fully funded by the government and covers both public and empaneled private hospitals. It addresses the high cost of treatment for critical illnesses, especially for the marginalized sections of the population. The goal is to provide accessible, high-quality healthcare without imposing financial hardship",
+            esi: "ESIS is a social security scheme for workers earning less than ₹21,000 per month in India. It provides a wide range of medical benefits, including hospitalizations, maternity care, and treatments for work-related injuries. Under the scheme, both the employee and employer contribute to the fund. In addition to medical benefits, ESIS also provides cash compensation during sickness and unemployment due to disability. The aim is to ensure that workers and their families receive proper healthcare without financial strain, supporting them through periods of illness or injury.",
+            karunya: "The Karunya Health Scheme, launched by the Kerala government, provides financial assistance to families suffering from serious ailments like cancer, heart disease, kidney failure, and more. This initiative primarily benefits Below Poverty Line (BPL) families, offering coverage up to ₹2 lakh per treatment. The scheme focuses on addressing healthcare inequalities by providing necessary treatments for chronic illnesses at no cost to the beneficiary. It also covers a wide range of high-cost procedures, including organ transplants. Karunya is a lifeline for patients in Kerala facing financial hurdles in accessing healthcare.",
+            jyotibaPhule: "Maharashtra’s Mahatma Jyotiba Phule Jan Arogya Yojana provides cashless treatment for low-income families, covering up to ₹1.5 lakh annually for medical procedures, including surgeries, hospitalizations, and critical care. Beneficiaries can avail of services in both public and private empaneled hospitals. The scheme aims to reduce out-of-pocket expenses for the poor and ensure access to quality healthcare. A wide range of critical illnesses, including cancer, heart conditions, and kidney disease, are covered under this scheme. Its primary objective is to reduce the financial burden of healthcare for the underserved.",
+            amrutum: "The Mukhyamantri Amrutum Yojana, launched by the Gujarat government, provides free tertiary healthcare for low-income families. Coverage includes treatments for critical illnesses, like cardiovascular diseases, neurological issues, and cancer, with a maximum coverage limit of ₹3 lakh per family. The scheme aims to make high-cost medical treatments accessible to the underprivileged, especially those living below the poverty line. Families can avail of cashless treatments in empaneled hospitals, and the scheme also covers emergency ambulance services. The scheme is designed to provide financial relief for catastrophic healthcare costs.",
+            suraksha: "This accident insurance scheme offers affordable coverage to individuals between the ages of 18 and 70 years. For an annual premium of ₹12, it provides coverage of ₹2 lakh in case of accidental death or total disability and ₹1 lakh for partial disability. The scheme is designed to provide financial security in the event of unforeseen accidents, especially for individuals from economically weaker sections. It also promotes the culture of insurance in India by offering a simple and accessible enrollment process through banks. The coverage renews annually, ensuring ongoing protection for policyholders.",
+            ysrAarogyasri: "Andhra Pradesh’s Dr. YSR Aarogyasri Health Care Trust provides health insurance to Below Poverty Line (BPL) families. The scheme covers a wide range of treatments for chronic diseases such as cancer, heart disease, and renal failure, offering coverage up to ₹5 lakh annually. Aarogyasri aims to ensure that vulnerable populations can access necessary medical services without financial distress. The initiative provides cashless treatment in empaneled hospitals, and the process is facilitated by the Aarogyasri health card, which helps identify beneficiaries easily. The scheme is vital for the healthcare welfare of Andhra Pradesh's economically weaker population.",
+            telanganaHealth: "Telangana's government introduced this health insurance scheme to provide comprehensive medical coverage to its employees and accredited journalists. The scheme offers cashless treatment for various medical conditions, including surgeries, hospitalizations, and critical illnesses. Beneficiaries can avail themselves of these services in empaneled hospitals. The government ensures that employees do not have to bear the high cost of medical treatments by providing full coverage for specified procedures. This initiative emphasizes the welfare of public sector employees and journalists, ensuring their financial security in times of medical emergencies.",
+            rsby: "RSBY is a national health insurance scheme targeting families living below the poverty line. It offers hospitalization coverage up to ₹30,000 annually for the enrolled family, which includes both primary and secondary care. Beneficiaries are issued a smart card, which they can use at empaneled hospitals to access cashless services. The scheme includes coverage for pre-existing conditions and aims to reduce out-of-pocket medical expenses for the poor. RSBY focuses on improving access to healthcare for the underprivileged, ensuring that financial constraints do not prevent them from receiving necessary medical treatment.",
+            universalHealth: "The Universal Health Insurance Scheme (UHIS) was introduced to provide health insurance to families below the poverty line. It offers medical coverage for hospitalization, maternity, and illness up to ₹30,000 per year. UHIS also includes personal accident coverage of ₹25,000 for the primary breadwinner. The scheme is intended to reduce the financial burden of healthcare and provide protection in case of accidents or health emergencies. It helps ensure that the poorest sections of society have access to basic health services without being crippled by healthcare costs.",
+            yeshasvini: "Karnataka’s Yeshasvini Health Insurance Scheme is a unique cooperative-based health initiative designed for farmers and members of cooperative societies. The scheme provides affordable healthcare, offering coverage for more than 800 surgical procedures, including major surgeries like heart operations, at discounted rates. Beneficiaries can avail themselves of cashless treatments in empaneled hospitals. Yeshasvini focuses on providing financial security to the rural population and cooperative members, ensuring they have access to quality healthcare without facing exorbitant expenses.",
+            westBengalHealth: "The West Bengal Health Scheme is designed for state government employees and pensioners, providing them with cashless treatment in empaneled hospitals. The scheme covers various medical conditions and procedures, including surgeries, hospitalizations, and critical care. Employees can also seek treatment in private hospitals under this scheme, with coverage extending to pre-existing conditions. The scheme’s aim is to provide comprehensive healthcare to government employees, ensuring their financial protection and healthcare security. It significantly reduces the healthcare burden for the state's workforce and retirees."
+        };
+
+        function showDescription(scheme) {
+            document.getElementById('description').innerText = descriptions[scheme];
+        }
+    </script>
+</body>
+</html>

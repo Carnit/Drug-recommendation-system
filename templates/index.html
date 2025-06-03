@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAlt</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1><img src="../images/logo.png" alt="MEDALT Logo"> MedAlt</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Generate Alternative</a></li>
+                <li><a href="gov-policies.html">Government Policies</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <h1>Search Alternate Medicines</h1>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </div>
+        </main>
+    </div>
+
+    <section class="about-us" id="about-us">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>Welcome to MedAlt, your trusted resource for alternative medicine. Our mission is to empower you with comprehensive information about alternative medicines, helping you make informed choices about your health and well-being.</p>
+            <p>At MedAlt, we believe in the value of exploring different approaches to health. Our platform offers a wealth of information about alternative medicines, including their descriptions, benefits, and potential side effects. We aim to provide you with the knowledge you need to make informed choices and explore the various options available to you.</p>
+        </div>
+        <div class="about-images">
+            <div class="image-slider">
+                <div><img src="../images/medicine.svg" alt="Image 1"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>@ All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Pop-up Modal -->
+    <div id="welcome-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Welcome to MedAlt</h2>
+            <p>Your trusted resource for alternative medicine!</p>
+            <button id="close-popup" class="close-button">Get Started</button>
+        </div>
+    </div>
+
+    <!-- jQuery and Slick.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+
+    <!-- JavaScript/jQuery for pop-up and slider -->
+    <script>
+        $(document).ready(function(){
+            // Show the pop-up after a slight delay
+            setTimeout(function(){
+                $('#welcome-popup').addClass('show');
+            }, 500);
+
+            // Close the pop-up when clicking the "Get Started" button
+            $('#close-popup').on('click', function(){
+                $('#welcome-popup').removeClass('show');
+            });
+
+            // Image slider code
+            $('.image-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+</body>
+</html>
