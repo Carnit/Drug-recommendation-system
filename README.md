@@ -119,7 +119,7 @@ pip install -r requirements.txt
 # Or run the data cleaning script to prepare your data
 python data_cleaning.py
 
-# then run teh below command 
+# then run the below command 
 jupyter notebook
 
 # At last run the web application with Streamlit

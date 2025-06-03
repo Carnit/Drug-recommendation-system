@@ -1,0 +1,29 @@
+[project]
+name = "drug-recommendation-system"
+version = "0.1.0"
+description = "A machine learning-based solution to assist healthcare providers in making personalized medication recommendations"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Carnit", email = "nlesh.barat10.8@gmail.com"},
+]
+
+dependencies = [
+    "numpy>=1.20.0",
+    "pandas>=1.3.0",
+    "scikit-learn>=1.0.0",
+    "nltk>=3.6.0",
+    "streamlit>=1.10.0",
+    "matplotlib>=3.4.0",
+    "seaborn>=0.11.0",
+    "pillow>=8.3.0",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.0.0",
+    "tqdm>=4.62.0",
+    "requests>=2.26.0",
+]
+
+[project.urls]
+Repository = "https://github.com/Carnit/Drug-recommendation-system"
+
